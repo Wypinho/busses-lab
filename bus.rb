@@ -30,4 +30,14 @@ class Bus
     end
   end
 
+  def pick_up_from_stop(bus_stop)
+    for person in bus_stop.queue
+      bus_stop.remove_from_queue(person)
+      pick_up(person)
+    end
+    for person in @passengers
+      pick_up(person)
+    end
+  end
+
 end
