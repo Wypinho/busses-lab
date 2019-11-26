@@ -24,4 +24,10 @@ class Bus
     @passengers.delete(passenger)
   end
 
+  def empty()
+    for passenger in @passengers
+      @passengers.delete(passenger)
+    end
+  end
+
 end
