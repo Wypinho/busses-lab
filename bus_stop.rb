@@ -7,4 +7,12 @@ class BusStop
     @queue = []
   end
 
+  def queue_length()
+    return @queue.length
+  end
+
+  def add_to_queue(passenger)
+    @queue.push(passenger)
+  end
+
 end
